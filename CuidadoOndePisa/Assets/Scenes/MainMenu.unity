@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManagement: {fileID: 0}
-  levelManagement: {fileID: 0}
 --- !u!4 &446674739
 Transform:
   m_ObjectHideFlags: 0
@@ -911,6 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 26960931}
   exit: {fileID: 2002328498}
+  gameManager: {fileID: 446674737}
 --- !u!1 &2002328496
 GameObject:
   m_ObjectHideFlags: 0

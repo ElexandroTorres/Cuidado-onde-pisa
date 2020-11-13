@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManagement: {fileID: 0}
-  levelManagement: {fileID: 0}
 --- !u!4 &368649215
 Transform:
   m_ObjectHideFlags: 0
@@ -1505,7 +1504,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970216365}
-  - component: {fileID: 1970216366}
   - component: {fileID: 1970216367}
   m_Layer: 0
   m_Name: UiManagement
@@ -1528,20 +1526,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1970216366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970216364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6afe93219b694ae4da08556e75fef068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textLives: {fileID: 1064489531}
-  textColect: {fileID: 1108517046}
 --- !u!114 &1970216367
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,16 +9,10 @@ public class GameManager : MonoBehaviour
 
     private static int livesCount = 3;
     private static int pointsCount = 0;
-    private bool isGameOver = false;
     private Scene currentsScene;
 
     private void Start() {
         currentsScene = SceneManager.GetActiveScene();
-        if(isGameOver)
-        {
-            ResetStatus();
-        }
-        
     }
 
     private void LateUpdate() {
@@ -28,7 +22,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver() 
     { 
-        isGameOver = true;
         ScoreSreen();
     }
 
@@ -53,16 +46,9 @@ public class GameManager : MonoBehaviour
 
     public void ResetStatus()
     {
-        isGameOver = false;
         pointsCount = 0;
         livesCount = 3;
     }
-
-
-    ////
-
-        
-
 
     public void NextLevel()
     {
