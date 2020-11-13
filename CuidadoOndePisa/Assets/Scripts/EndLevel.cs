@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    public GameObject levelManagement;
-
+    [SerializeField] GameObject gameManager;
 
     private void OnCollisionEnter(Collision other) {
-        levelManagement.GetComponent<LevelManagement>().NextLevel();
+        gameManager.GetComponent<GameManager>().NextLevel();
     }
-
 
 }

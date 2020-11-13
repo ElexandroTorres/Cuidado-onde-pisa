@@ -23,7 +23,11 @@ public class LevelManagement : MonoBehaviour
         {
             SceneManager.LoadScene("ScoreScreen");
         }
+    }
 
+    public void NextScoreSreen()
+    {
+        SceneManager.LoadScene("ScoreScreen");
     }
 
     private void Update() {

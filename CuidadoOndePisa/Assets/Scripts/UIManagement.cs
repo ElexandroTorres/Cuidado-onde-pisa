@@ -8,26 +8,28 @@ public class UIManagement : MonoBehaviour
     [SerializeField] TextMeshProUGUI textLives;
     [SerializeField] TextMeshProUGUI textColect;
 
-    private static int livesCount = 3;
-    private static int colectCount = 0;
+    //private static int livesCount = 3;
+    //private static int colectCount = 0;
     // Start is called before the first frame update
-    void Start()
+
+    
+    public void UpdateStatus(int lives, int points)
     {
-        showPoints();
+        textLives.text = lives.ToString();
+        textColect.text = points.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdatePoints(int points)
     {
-        showPoints();
+        textColect.text = points.ToString();
     }
 
-    private void showPoints()
+    public void UpdateLives(int lives)
     {
-        textLives.text = livesCount.ToString();
-        textColect.text = colectCount.ToString();
+        textLives.text = lives.ToString();
     }
 
+    /*
     public void UpdateColectPoints(int points)
     {
         colectCount += points;
@@ -44,4 +46,5 @@ public class UIManagement : MonoBehaviour
     {
         return livesCount;
     }
+    */
 }

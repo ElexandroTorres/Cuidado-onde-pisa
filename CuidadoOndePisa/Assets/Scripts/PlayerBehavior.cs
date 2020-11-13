@@ -7,9 +7,12 @@ public class PlayerBehavior : MonoBehaviour
 {
 
     [SerializeField] Vector3 spawnPosition;
-    [SerializeField] GameObject uiManagement;
+    [SerializeField] GameObject gameManager;
 
-    private UIManagement _uiManagement;
+    //[SerializeField] GameObject uiManagement;
+
+    private GameManager _gameManager;
+    //private UIManagement _uiManagement;
     private Rigidbody rb;
     private Transform tempParent;
     private bool canJump = false;
@@ -19,7 +22,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         tempParent = transform.parent;
-        _uiManagement = uiManagement.GetComponent<UIManagement>();
+        _gameManager = gameManager.GetComponent<GameManager>();
     }
 
     void Update()
@@ -47,7 +50,7 @@ public class PlayerBehavior : MonoBehaviour
         if(other.CompareTag("Collectable"))
         {
             Destroy(other.gameObject);
-            _uiManagement.UpdateColectPoints(10);
+            _gameManager.AddPoints();
         }
     }
 
@@ -72,16 +75,9 @@ public class PlayerBehavior : MonoBehaviour
 
     public void Death()
     {
-        _uiManagement.LivesDown();
-        if(_uiManagement.NumberOfLives() > 0)
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero; 
-            transform.position = spawnPosition;
-        }
-        else {
-            SceneManager.LoadScene("ScoreScreen");
-        }
-        
+        _gameManager.Death();
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero; 
+        transform.position = spawnPosition;
     }
 }
