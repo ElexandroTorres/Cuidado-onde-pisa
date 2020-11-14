@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlataformBehavior : MonoBehaviour
 {
-
     [SerializeField] bool isGoing = true;
     [SerializeField] float startingPosition;
     [SerializeField] float returnPosition;
@@ -13,8 +12,8 @@ public class PlataformBehavior : MonoBehaviour
 
     private Vector3 plataformDirection;
    
-
-    void Start() {
+    void Start() 
+    {
         // Plataforma se movementa de lado.
         if(plataformMovement == "Side")
         {
@@ -29,11 +28,9 @@ public class PlataformBehavior : MonoBehaviour
         else if(plataformMovement == "Up")
         {
             plataformDirection = new Vector3(0, 1, 0);
-        }
-        
+        }  
     }
     
-
     void Update()
     {
         var plataformMoves = PlataformMoves(plataformMovement);

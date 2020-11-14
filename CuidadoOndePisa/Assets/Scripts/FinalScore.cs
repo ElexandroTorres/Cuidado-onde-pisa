@@ -11,7 +11,6 @@ public class FinalScore : MonoBehaviour
 
     [SerializeField] GameObject gameManager;
 
-
     private GameManager _gameManager;
     private int score = 0;
     
