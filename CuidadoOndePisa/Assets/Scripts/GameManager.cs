@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
 
     public void Death()
     {
-        //verificar a quantidade de vidas.
         livesCount--;
         uIManagement.UpdateStatus(livesCount, pointsCount);
         if(livesCount <= 0)
@@ -57,6 +56,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Fase2");
         }
         if(currentsScene.name == "Fase2")
+        {
+            SceneManager.LoadScene("ScoreScreen");
+        }
+        if(currentsScene.name == "Fase3")
         {
             SceneManager.LoadScene("ScoreScreen");
         }
