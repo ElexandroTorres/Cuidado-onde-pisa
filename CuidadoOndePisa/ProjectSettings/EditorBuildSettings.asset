@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase2.unity
     guid: dd7fe700ee79ba0448184c64a4704189
   - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: d339ff56bfec4c043905aa68d30caa05
+  - enabled: 1
     path: Assets/Scenes/ScoreScreen.unity
     guid: 20fe543c406b3c44297b482bfd9034a8
   m_configObjects: {}

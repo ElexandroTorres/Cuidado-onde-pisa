@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         }
         if(currentsScene.name == "Fase2")
         {
-            SceneManager.LoadScene("ScoreScreen");
+            SceneManager.LoadScene("Fase3");
         }
         if(currentsScene.name == "Fase3")
         {
